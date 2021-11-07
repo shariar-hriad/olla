@@ -1,33 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../images/logo.webp";
 
 function NavBar() {
+  const [navbar, setNavbar] = useState(false);
+
+  const fixedNav = () => {
+    if (window.scrollY >= 76) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", fixedNav);
+
   return (
-    <Navbar>
+    <Navbar className={navbar ? "fixed" : null}>
       <NavbarWrapper>
         <Navlogo to="/">
           <Image src={logo} alt="olla" />
         </Navlogo>
         <NavMenu>
           <NavList>
-            <Navlink to="/">Home</Navlink>
+            <Navlink to="/" activeClassName="active">
+              Home
+            </Navlink>
           </NavList>
           <NavList>
-            <Navlink to="/about">about</Navlink>
+            <Navlink to="/about" activeClassName="active">
+              about
+            </Navlink>
           </NavList>
           <NavList>
-            <Navlink to="/">services</Navlink>
+            <Navlink to="/services" activeClassName="active">
+              services
+            </Navlink>
           </NavList>
           <NavList>
-            <Navlink to="/">portfolio</Navlink>
+            <Navlink to="/portfolio" activeClassName="active">
+              portfolio
+            </Navlink>
           </NavList>
           <NavList>
-            <Navlink to="/">Blog</Navlink>
+            <Navlink to="/blog" activeClassName="active">
+              Blog
+            </Navlink>
           </NavList>
           <NavList>
-            <Navlink to="/">Contact</Navlink>
+            <Navlink to="/contact" activeClassName="active">
+              Contact
+            </Navlink>
           </NavList>
         </NavMenu>
         <ButtonWrapper>
@@ -44,6 +68,14 @@ const Navbar = styled.div`
   padding: 0 88px;
   box-shadow: 0 3px 8px rgb(4 23 53 / 4%);
   border-bottom: 1px solid #dbdee9;
+  &.fixed {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
 `;
 
 const NavbarWrapper = styled.div`
@@ -78,10 +110,13 @@ const Navlink = styled(NavLink)`
   color: #041735;
   font-size: 17px;
   font-weight: 600;
+  border-bottom: 3px solid transparent;
   transition: all 0.3s ease-out 0s;
   text-transform: capitalize;
   position: relative;
-
+  &.active {
+    border-bottom: 3px solid #041735;
+  }
   &:hover {
     color: #2845ba;
   }
@@ -91,7 +126,7 @@ const ButtonWrapper = styled.div`
   padding: 0 0 0 3px;
 `;
 
-const NavButton = styled(Link)`
+export const NavButton = styled(Link)`
   display: inline-block;
   background: #2845ba;
   border: 1px solid #2845ba;

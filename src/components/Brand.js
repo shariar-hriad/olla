@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Container } from "../GlobalStyles";
+import BrandSlider from "./BrandSlider";
 import { SecSubTitle } from "./Description";
 import { SecTitle } from "./Title";
 
@@ -17,7 +18,7 @@ function Brand() {
           </Description>
           <Button to="">Meet Our Customers</Button>
         </SectionTitle>
-        {/* <BrandSlider /> */}
+        <BrandSlider />
       </Container>
     </BrandArea>
   );

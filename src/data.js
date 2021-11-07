@@ -80,3 +80,75 @@ export const brandSlider = [
     img: require("./images/s3.webp"),
   },
 ];
+
+export const accordion = [
+  {
+    id: 1,
+    title: "Complete CMS integration?",
+    description:
+      "Facilisis ac eget mauris nulla enim a diam. Posure vel eleifend augue laoreet non praesent ultrices.",
+  },
+  {
+    id: 2,
+    title: "What impacts my car insurance price?",
+    description:
+      "Facilisis ac eget mauris nulla enim a diam. Posure vel eleifend augue laoreet non praesent ultrices.",
+  },
+  {
+    id: 3,
+    title: "What does car insurance cover?",
+    description:
+      "Facilisis ac eget mauris nulla enim a diam. Posure vel eleifend augue laoreet non praesent ultrices.",
+  },
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    img: require("./images/avatar.png"),
+    alt: "Jakaria",
+    author: "Jakaria",
+    position: "CEO at Dusra",
+    description:
+      "Facilisis ac eget mauris nulla enim a diam. Posuere vel eleifend augue laoreet non praesent ultrices. Olla is perfect for building websites of almost any kind.",
+  },
+  {
+    id: 2,
+    img: require("./images/avatar.png"),
+    alt: "Abu Saim",
+    author: "Abu Saim",
+    position: "CEO at Dusra",
+    description:
+      "Facilisis ac eget mauris nulla enim a diam. Posuere vel eleifend augue laoreet non praesent ultrices. Olla is perfect for building websites of almost any kind.",
+  },
+  {
+    id: 3,
+    img: require("./images/avatar.png"),
+    alt: "Shariar",
+    author: "Shairar",
+    position: "React Developer at Dusra",
+    description:
+      "Facilisis ac eget mauris nulla enim a diam. Posuere vel eleifend augue laoreet non praesent ultrices. Olla is perfect for building websites of almost any kind.",
+  },
+];
+
+export const project = [
+  {
+    id: 1,
+    image: require("./images/project1.webp"),
+    title: "Mobile App",
+    description: "Facilisis ac eget mauris nulla.",
+  },
+  {
+    id: 2,
+    image: require("./images/project2.webp"),
+    title: "Mobile App",
+    description: "Facilisis ac eget mauris nulla.",
+  },
+  {
+    id: 3,
+    image: require("./images/project3.webp"),
+    title: "Mobile App",
+    description: "Facilisis ac eget mauris nulla.",
+  },
+];

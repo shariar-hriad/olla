@@ -7,7 +7,7 @@ function AboutDetails() {
     <>
       {aboutTexts.map(({ id, title, description, border }) => {
         return (
-          <SingleText key={id} border>
+          <SingleText key={id} style={{ borderBottom: !border ? "0px" : null }}>
             <Title>{title}</Title>
             <Description>{description}</Description>
           </SingleText>
@@ -22,7 +22,7 @@ export default AboutDetails;
 const SingleText = styled.div`
   padding-bottom: 5px;
   margin-bottom: 15px;
-  border-bottom: ${({ border }) => (border ? "1px solid #dbdee9" : "")};
+  border-bottom: 1px solid #dbdee9;
 `;
 
 const Title = styled.h5`

@@ -90,16 +90,17 @@ const Description = styled.p`
 
 const Form = styled.form``;
 
-const InputForm = styled.div`
+export const InputForm = styled.div`
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  background: #fff;
   border: 1px solid #2845ba;
   justify-content: space-between;
   border-radius: 4px;
 `;
 
-const Input = styled.input`
+export const Input = styled.input`
   flex: 1;
   outline: none;
   border: none;
@@ -111,7 +112,7 @@ const Input = styled.input`
   border-bottom-left-radius: 4px;
 `;
 
-const Button = styled(Link)`
+export const Button = styled(Link)`
   display: inline-block;
   background: #2845ba;
   padding: 24px 19px;
